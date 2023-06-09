@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;700&display=swap');
+
+:root{
+    --color-base1: #DDEA73;
+    --color-side: #D2A335; 
+    --color-body: #C16200; 
+    --color-base3: #881600; 
+    --color-base2: #4E0110;
+}
+
+body{
+    background-color: whitesmoke;
+    color: #C16200;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #4E0110;
+    font-weight: 700;
+}
+h4{
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: #4E0110;
+    overflow: hidden;
+
+}
+
+/* navbar */
+.nav-link{
+    color: #4E0110;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid #4E0110;
+    
+}
+.navbar{
+    background-color: #D2A335;
+}
+
+
+a, .nav-link:hover{
+    color: whitesmoke;
+}
+.con-btn:hover{
+    background-color: #4E0110;
+}
+
+img{
+    width: 100%;
+}
+@media screen and (max-width:767px) {
+    .card{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        text-align: center;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+   .container2{
+    display: grid ;
+    grid-template-rows: repeat(4, 200px);
+    justify-content: center;
+    align-items: center;
+   }
+   .container2 .box canvas{
+    position: absolute;
+    margin: auto;
+    top: 9px;
+    left: 20px;
+    letter-spacing: 40px;
+    width: 154px;
+}
+.container2 .card:hover{
+    transform: translateY(-10px);
+    
+}
+.container2 .card:hover .chart{
+    color: #4E0110;
+    font-size: 20px;
+    transition: 1s;
+}
+    
+}
+@media (min-width:940px) {
+    .navbar{
+        min-height: 100vh;
+        width: 240px;
+        background: linear-gradient(rgb(193, 98, 0),rgba(243, 226, 185, 0.999)), url(../images/collection-brown-chicken-eggs-board.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        background-color: var(--white);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        font-size: 28px;
+        margin-left: 5px;
+        z-index: 100;
+    }
+    .social-links{
+        position: absolute;
+        right: 25px;
+        top: 35px;
+    }
+   
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        width: 220px;
+        border-radius: 8px;
+        text-align: center;
+        /* overflow: hidden; */
+        transition: 0.5s;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: repeat(4, 200px);
+        gap: 80px;
+        margin: auto 0;
+    }
+    .container2 .box {width: 100%;}
+    .container2 .box .chart {
+        position: relative;
+        width: 100% ;
+        height: 250px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140px;
+        height: 100px;
+    }
+    .container2 .box .chart span{
+        font-size: 13px;
+        margin-left: -5px;
+    }
+    .container2 .box canvas{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 20px;
+        letter-spacing: 40px;
+        width: 180px;
+    }
+    .container2 .card:hover{
+        transform: translateY(-10px);
+        
+    }
+    .container2 .card:hover .chart{
+        color: #4E0110;
+        font-size: 30px;
+        transition: 1s;
+    }
+
+    .wrapper{
+        padding-left: 240px;
+    }
+    .hero-image{
+        width: 600px;
+        height: 650px;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 750px;
+        bottom: -10px;
+        animation: animateuser 5s linear infinite;
+    }
+
+    @keyframes animateuser {
+        50%{
+            left: 700px;
+            bottom: -10px;
+        }   
+    }   
+}
+/* //navbar */
+/* home */
+
+
+/*service */
+
+.se-bg{
+    background-color: #C16200;
+    text-align: center;
+    height: 450px;
+}
+.slider{
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+}
+.se-img{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.se-text{
+    color: whitesmoke;
+}
+.se-img img{
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.se-img input{
+    display: none;
+}
+/* slider1 */
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px 0;
+}
+.dots label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #881600 3px;
+    cursor: pointer;
+    transition: all 0,15s ease;
+    margin: 3px;
+}
+.dots label:hover{
+    background: #881600;
+}
+
+#img1:checked ~ .img1 {
+    margin-left: 0;
+}
+#img2:checked ~ .img2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .img3 {
+    margin-left: -200%;
+}
+/* //slider1 */
+
+/* slider2 */
+.dots2{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px 0;
+}
+.dots2 label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #881600 3px;
+    cursor: pointer;
+    transition: all 0,15s ease;
+    margin: 3px;
+}
+.dots2 label:hover{
+    background: #881600;
+}
+
+#img4:checked ~ .img4 {
+    margin-left: 0;
+}
+#img5:checked ~ .img5 {
+    margin-left: -100%;
+}
+/* //slider2 */
+/* skills */
+/* #skill{
+    display: flex;
+    justify-content: center;
+} */
+
+
+/* contact */
+.con-1{
+    place-content: center;
+}
+
+
+/* footer */
+.footer{
+    background-color: #D2A335;
+}
